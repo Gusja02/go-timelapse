@@ -1,0 +1,11 @@
+services:
+  timelapse-gen:
+    image: gusja/go-timelapse:v1.0 
+    container_name: timelapse_worker
+    env_file: 
+      - .env
+    volumes:
+      - ${IMG_SOURCE_PATH}:${INPUT_DIR}
+      - ${TIMELAPSE_OUTPUT_DIR}:${OUTPUT_DIR}
+      - ${PROCESSED_FILES_DIR}:${PROCESSED_DIR}
+      

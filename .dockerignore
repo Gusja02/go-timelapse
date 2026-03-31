@@ -1,0 +1,9 @@
+.env
+local.env
+data/
+output/
+processed/
+*.txt
+.git
+README.md
+.vscode/
